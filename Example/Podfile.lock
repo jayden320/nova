@@ -1,0 +1,42 @@
+PODS:
+  - NovaMetrics/AnrMonitorPlugin (0.1.0):
+    - NovaMetrics/Core
+  - NovaMetrics/Core (0.1.0)
+  - NovaMetrics/MemoryLeaksPlugin (0.1.0):
+    - NovaMetrics/Core
+    - NovaMetrics/MLeaksFinder
+  - NovaMetrics/MLeaksFinder (0.1.0)
+  - NovaMetrics/PageMonitorPlugin (0.1.0):
+    - NovaMetrics/Core
+    - NovaMetrics/VCProfiler
+  - NovaMetrics/Tests (0.1.0)
+  - NovaMetrics/UIThreadMonitorPlugin (0.1.0):
+    - NovaMetrics/Core
+  - NovaMetrics/VCProfiler (0.1.0)
+  - NovaUI (0.1.0):
+    - NovaMetrics/Core
+  - NovaUI/Tests (0.1.0):
+    - NovaMetrics/Core
+
+DEPENDENCIES:
+  - NovaMetrics/AnrMonitorPlugin (from `../`)
+  - NovaMetrics/MemoryLeaksPlugin (from `../`)
+  - NovaMetrics/PageMonitorPlugin (from `../`)
+  - NovaMetrics/Tests (from `../`)
+  - NovaMetrics/UIThreadMonitorPlugin (from `../`)
+  - NovaUI (from `../`)
+  - NovaUI/Tests (from `../`)
+
+EXTERNAL SOURCES:
+  NovaMetrics:
+    :path: "../"
+  NovaUI:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NovaMetrics: 285c0a8fdb17d0f6baace574b654ec756976f03a
+  NovaUI: d327f9ed5ffdc6ed7e3fcee40cfc8e63d3b15b7f
+
+PODFILE CHECKSUM: 127455600dc778a025c283cf25c42b376d19d06c
+
+COCOAPODS: 1.12.1

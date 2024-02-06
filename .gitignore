@@ -1,0 +1,38 @@
+# Mac OS X
+.DS_Store
+external/.DS_Store
+
+# Xcode
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcuserstate
+*.xccheckout
+*.hmap
+*.xcworkspace
+!default.xcworkspace
+xcuserdata/
+Example/Pods/
+# Generated files
+*.pyc
+Pods/
+.package.json
+# Backup files
+*~.nib
+*.idea*
+/.bundle
+fastlane/test_output/
+fastlane/README.md
+fastlane/report.xml
+fastlane/doto/ios
+*/**/report.xml
+logs
+_Prebuild_delta
+/build
+_Prebuild
+_Prebuilt
