@@ -1,0 +1,21 @@
+"Memory Leak" = "Memory Leak";
+"Plugin for detecting memory leaks, based on MLeakFinder." = "Plugin for detecting memory leaks, based on MLeakFinder.";
+
+"ANR" = "ANR";
+"Regularly ping the main thread to detect whether the main thread is blocked." = "Regularly ping the main thread to detect whether the main thread is blocked.";
+
+"UI Thread Monitor" = "UI Thread Monitor";
+"Detect if UI API is called on a background thread." = "Detect if UI API is called on a background thread.";
+
+"Page Monitor" = "Page Monitor";
+
+"Setting" = "Setting";
+"Floating Window" = "Floating Window";
+"Issue Notification" = "Issue Notification";
+"Reboot app to take effect" = "Reboot app to take effect";
+"OK" = "OK";
+"Notification" = "Notification";
+"Logs" = "Logs";
+"Turn off" = "Turn off";
+"Turn on" = "Turn on";
+"An issue was detected, click to see more" = "An issue was detected, click to see more";

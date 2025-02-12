@@ -1,0 +1,21 @@
+"Memory Leak" = "内存泄漏";
+"Plugin for detecting memory leaks, based on MLeakFinder." = "基于 MLeakFinder 的内存泄漏检测插件。";
+
+"ANR" = "ANR";
+"Regularly ping the main thread to detect whether the main thread is blocked." = "定期检查主线程，检测是否被阻塞。";
+
+"UI Thread Monitor" = "UI 线程监控";
+"Detect if UI API is called on a background thread." = "检测是否在后台线程中调用 UI API。";
+
+"Page Monitor" = "页面监控";
+
+"Setting" = "设置";
+"Floating Window" = "悬浮窗";
+"Issue Notification" = "问题通知";
+"Reboot app to take effect" = "重启应用后生效";
+"OK" = "确定";
+"Notification" = "通知";
+"Logs" = "日志";
+"Turn off" = "关闭";
+"Turn on" = "开启";
+"An issue was detected, click to see more" = "检测到问题，点击查看详情";

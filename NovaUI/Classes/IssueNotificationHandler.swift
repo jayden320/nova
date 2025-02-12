@@ -20,8 +20,8 @@ class IssueNotificationHandler: NovaDelegate {
         guard NovaUILauncher.shared.isIssueNotificationEnabled, NovaUILauncher.shared.isNotificationEnable(issue.tag) else {
             return
         }
-        let title = issue.name ?? issue.tag
-        let desc = issue.clue ?? "An issue was detected, click to see more"
+        let title = issue.name ?? NovaUtil.localized(issue.tag)
+        let desc = issue.clue ?? NovaUtil.localized("An issue was detected, click to see more")
         
         var icon: UIImage?
         if #available(iOS 14.0, *) {

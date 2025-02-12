@@ -29,12 +29,12 @@ class HomeViewController: BaseSettingTableViewController, NovaTableViewControlle
         data = []
 
         if NovaLauncher.shared.isEnabled {
-            data.append(SectionModel(headerTitle: "Setting", cellModels: [
-                CellModel(title: "Floating Window", switchValue: NovaUILauncher.shared.isFloatingWindowEnabled, onSwitchValueChanged: { switchView in
+            data.append(SectionModel(headerTitle:NovaUtil.localized( "Setting"), cellModels: [
+                CellModel(title: NovaUtil.localized("Floating Window"), switchValue: NovaUILauncher.shared.isFloatingWindowEnabled, onSwitchValueChanged: { switchView in
                     NovaUILauncher.shared.isFloatingWindowEnabled = switchView.isOn
                 }),
 
-                CellModel(title: "Issue Notification", switchValue: NovaUILauncher.shared.isIssueNotificationEnabled, onSwitchValueChanged: { [weak self] switchView in
+                CellModel(title: NovaUtil.localized("Issue Notification"), switchValue: NovaUILauncher.shared.isIssueNotificationEnabled, onSwitchValueChanged: { [weak self] switchView in
                     NovaUILauncher.shared.isIssueNotificationEnabled = switchView.isOn
                     self?.reloadData()
                 }),
@@ -70,8 +70,8 @@ class HomeViewController: BaseSettingTableViewController, NovaTableViewControlle
     }
 
     private func showRebootAlert() {
-        let alert = UIAlertController(title: "Reboot app to take effect", message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+        let alert = UIAlertController(title: NovaUtil.localized("Reboot app to take effect"), message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NovaUtil.localized("OK"), style: .cancel))
         present(alert, animated: true)
     }
 
@@ -80,13 +80,13 @@ class HomeViewController: BaseSettingTableViewController, NovaTableViewControlle
         let fileCount = LogUtil.loadSandboxModelCount(directoryName: tag)
         let lastFileCount = UserDefaults.standard.integer(forKey: "\(ConfigKey.issueCountPrefix)\(tag)")
 
-        let title = pluginType.getTag()
+        let title = NovaUtil.localized(pluginType.getTag())
         var cellModels = [
-            CellModel(title: "\(title) Notification", switchValue: NovaUILauncher.shared.isNotificationEnable(tag), switchEnable: NovaUILauncher.shared.isIssueNotificationEnabled, onSwitchValueChanged: { switchView in
+            CellModel(title: "\(title) \(NovaUtil.localized("Notification"))", switchValue: NovaUILauncher.shared.isNotificationEnable(tag), switchEnable: NovaUILauncher.shared.isIssueNotificationEnabled, onSwitchValueChanged: { switchView in
                 NovaUILauncher.shared.setIsNotificationEnable(switchView.isOn, tag: tag)
             }),
-            CellModel(title: "\(title) Logs", badge: fileCount - lastFileCount, onClicked: { [weak self] in
-                let vc = IssueListViewController(title: "\(pluginType.getTag()) Logs", pluginType: pluginType)
+            CellModel(title: "\(title) \(NovaUtil.localized("Logs"))", badge: fileCount - lastFileCount, onClicked: { [weak self] in
+                let vc = IssueListViewController(title: "\(title) \(NovaUtil.localized("Logs"))", pluginType: pluginType)
                 self?.navigationController?.pushViewController(vc, animated: true)
             }),
         ]

@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "Call UI API on background thread"; ObjectID = "Cu2-MU-Cag"; */
+"Cu2-MU-Cag.normalTitle" = "Call UI API on background thread";
+
+/* Class = "UIButton"; normalTitle = "Make ANR"; ObjectID = "fpI-Vv-Vb6"; */
+"fpI-Vv-Vb6.normalTitle" = "Make ANR";
+
+/* Class = "UIButton"; normalTitle = "Test Memory Leak"; ObjectID = "kO0-Yk-AeL"; */
+"kO0-Yk-AeL.normalTitle" = "Test Memory Leak";
+
+/* Class = "UIButton"; normalTitle = "Test Page Monitor"; ObjectID = "qNE-Bb-Bcn"; */
+"qNE-Bb-Bcn.normalTitle" = "Test Page Monitor";

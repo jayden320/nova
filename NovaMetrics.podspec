@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'NovaMetrics'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'APM SDK'
   s.description      = <<-DESC
 iOS performance monitoring tool designed to empower developers with comprehensive insights into their apps' performance.
@@ -17,6 +17,9 @@ iOS performance monitoring tool designed to empower developers with comprehensiv
 
   s.subspec 'Core' do |sp|
     sp.source_files = 'NovaMetrics/Core/Classes/**/*'
+    sp.resource_bundle = {
+      'Nova' => 'NovaMetrics/Resource/**/*'
+    }
   end
 
   s.subspec 'MemoryLeaksPlugin' do |sp|
@@ -53,5 +56,4 @@ iOS performance monitoring tool designed to empower developers with comprehensiv
     test_spec.source_files = 'NovaMetrics/Tests/**/*'
     test_spec.requires_app_host = true
   end  
-
 end

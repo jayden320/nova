@@ -47,7 +47,7 @@ public class UIThreadMonitorPlugin: NovaPlugin {
     }
 
     public override class func description() -> String? {
-        "Detect if UI API is called on a background thread."
+        NovaUtil.localized("Detect if UI API is called on a background thread.")
     }
 
     public override class func canReportIssue() -> Bool {

@@ -10,6 +10,31 @@ import Foundation
 import MachO
 
 public class NovaUtil {
+    public class func localized(_ key: String) -> String {
+         let language = Locale.preferredLanguages.first ?? ""
+
+         var fileNamePrefix = "zh-Hans"
+         if language.hasPrefix("en") {
+             fileNamePrefix = "en"
+         }
+
+         guard let bundleURL = Bundle.main.url(forResource: "Nova", withExtension: "bundle") else {
+             return key
+         }
+         
+         guard let bundle = Bundle(url: bundleURL) else {
+             return key
+         }
+
+         guard let path = bundle.path(forResource: fileNamePrefix, ofType: "lproj"),
+               let localizedBundle = Bundle(path: path) else {
+             return key
+         }
+
+         let localizedString = localizedBundle.localizedString(forKey: key, value: nil, table: nil)
+         return localizedString.isEmpty ? key : localizedString
+     }
+    
     public class func currentDate() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"

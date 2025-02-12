@@ -59,7 +59,7 @@ public class AnrMonitorPlugin: NovaPlugin {
     }
 
     public override class func description() -> String? {
-        "Regularly ping the main thread to detect whether the main thread is blocked."
+        NovaUtil.localized("Regularly ping the main thread to detect whether the main thread is blocked.")
     }
 
     public override class func canReportIssue() -> Bool {

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'NovaUI'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'APM SDK'
   s.description      = <<-DESC
 iOS performance monitoring tool designed to empower developers with comprehensive insights into their apps' performance.

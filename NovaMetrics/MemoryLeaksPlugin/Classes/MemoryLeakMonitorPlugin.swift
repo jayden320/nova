@@ -58,7 +58,7 @@ public class MemoryLeakMonitorPlugin: NovaPlugin {
     }
 
     public override class func description() -> String? {
-        "Plugin for detecting memory leaks, based on MLeakFinder."
+        NovaUtil.localized("Plugin for detecting memory leaks, based on MLeakFinder.")
     }
 
     public override class func canReportIssue() -> Bool {

@@ -69,7 +69,7 @@ class NovaCell: TDBadgedCell {
 class ToggleNovaCell: UITableViewCell {
     func update() {
         selectionStyle = .default
-        textLabel?.text = NovaLauncher.shared.isEnabled ? "Turn off" : "Turn on"
+        textLabel?.text = NovaLauncher.shared.isEnabled ? NovaUtil.localized("Turn off") : NovaUtil.localized("Turn on")
         textLabel?.textColor = NovaLauncher.shared.isEnabled ? .systemRed : .systemBlue
         textLabel?.textAlignment = .center
     }
